@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+     <link rel="stylesheet" href="/css/readmore.css"> 
+  </head>
+  
+  <body>
+<header>
+    <nav class = "navbar">
+      <div class = "container">
+        <a href = "index.html" class = "navbar-brand">Blog</a>
+        <div class = "navbar-nav">
+         <a href="/" class="button">Home</a>
+          <a href="/register" class="button">Register</a>
+          <a href="/login" class="button">Login</a>
+        </div>
+      </div>
+    </nav>
+<div>
+     
+    
+    <div class = "container">
+        <div class = "blog-content"></div>
+            <div class="main-content single">
+                <div class = "blog-item">
+                    <div class = "blog-img"> 
+                      <span><i class = "far fa-heart"></i></span>
+                    </div>
+                    <div class = "blog-text">
+
+
+
+                <h1 class="post-title"><%= users.title %></h1>
+            <div class="post-content">
+                <img src="/images/<%= users.image %>" width="500px" height="500px"/>
+                <p><%= users.description %></p>
+            </div>    
+            </div>
+       
+            <div class="sidebar single">
+
+                <div class="section topics">
+                
+                </div>
+            </div>
+        
+        </div>
+        
+    </div>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    
+</body>
+</html>
+
+<%- include('./layout/footer.ejs'); %>

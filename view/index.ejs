@@ -1,0 +1,59 @@
+ 
+    <%- include('./layout/header.ejs'); %>
+    
+    <section class = "blog" id = "blog">
+      <div class = "container">
+        <div class = "title">
+          <h2>Latest Blog</h2>
+          
+          <p></p>
+        </div>
+        <div class = "blog-content">
+         <% for(var i = users.length-1; i >=0; i--) { %> 
+          <div class = "blog-item"><%= users[i].id %>
+            <div class = "blog-img">
+              <img src="images/<%= users[i].image %>"  alt = "">
+              <span><i class = "far fa-heart"></i></span>
+            </div>
+            <div class = "blog-text"><%= users[i].title %>
+              <span class><%= users[i].date %></span>
+              <p><%= users[i].title %><span id="dots">...........</span><span id="more"><%= users[i].description %></span></p>
+
+              <a href="/readmore/<%= users[i].id %>" class="btn read-more">Read More</a>
+             
+             
+            </div>
+          </div>
+          <% } %>
+         
+
+        </div>
+      </div>
+    </section>
+    
+    <section class = "about" id = "about">
+      <div class = "container">
+        <div class = "about-content">
+          <div>
+            <img src = "images/about-bg.jpeg" alt = "">
+          </div>
+          <div class = "about-text">
+            <div class = "title">
+              <h2>ORIGIN OF GUMUDA</h2>
+              <p>АМЬДРАЛ ӨӨРЧЛӨГДСӨН ТҮҮХҮҮД</p>
+            </div>
+            <p>Би тийм ч их буруу зуршилтай хүн биш л дээ, гэхдээ зөв сайн амьдралын хэмнэлтэй юу гэвэл бас үгүй. Биеийн хэлбэртээ сэтгэл хангалуун бус, ажил амьдралдаа түүртдэг, амархан ядарч, юу юугүй гомдож тунирхдаг л нэгэн. Өөрийгөө хайрлаж, эрхлүүлдэг гэж боддог ч үнэндээ энэ талаар олигтой мэдлэггүй гэдгээ харин мэднэ.</p>
+            <p>Стресс даах чадвар маань дээсэн дөрөөн дээр дэнжигнэж байдаг учраас хэн нэгэн намайг жаахан л уурлуулахад, амьдрал дахиад жаахан л хүнд санагдахад би бүх зүйлд бууж өгөөд, цагаан тугаа өргөхөд бүхнийг хаяад явчихад бэлэн санагддаг. Ирмэг дээр дэнжигнэж байхдаа доошоо унах уу, дээшээ гарах уу гэдгийг минь шийдэж өгсөн нэгэн үйл явдлын тухай би энэ нийтлэлийн төгсгөлд та бүхэнд ярьж өгье. Үүнээс өмнө надтай адилхан түүхтэй бусдын сэтгэгдлийг сонсоорой.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    
+    
+  </body>
+</html>
+
+
+<%- include('./layout/footer.ejs'); %>

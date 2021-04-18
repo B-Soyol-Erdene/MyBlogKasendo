@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Blog Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="css/about.css" /> 
+  </head>
+  
+  <body>
+<header>
+    <nav class = "navbar">
+      <div class = "container">
+        <a href = "index.html" class = "navbar-brand">Blog</a>
+        <div class = "navbar-nav">
+         <a href="/" class="button">Home</a>
+          <a href="/about" class="button">About</a>
+          <a href="/register" class="button">Register</a>
+          <a href="/login" class="button">Login</a>
+        </div>
+      </div>
+    </nav>
+<div>
+    <section class="s-content">
+        <div class="row">
+            <div class="column large-12"></div>
+       <% for(var i=0 ; i< users.length; i++) { %>
+        <a href="/read/<%= users[i].username %>">
+<div class="card" style="width: 18rem;">
+    <img src="../images/image3.jpg" class="card-img-top" alt="Table">
+    <div class="card-body">
+      <h5 class="card-title"><%= users[i].username %></h5>
+      <p class="card-text"></p>
+      
+    </div>
+  </div>
+</a>
+  <% } %>
+</div>
+</section>
+</div>
+<%- include('./layout/footer.ejs'); %>
